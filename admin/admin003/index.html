@@ -15,6 +15,19 @@
         @tailwind utilities;
 
         @layer utilities {
+            
+            .breadcrumb {
+            }
+            .breadcrumb .breadcrumb-item {
+                padding: 0 8px 0 0;
+                opacity: 0.75;
+            }
+            .breadcrumb .breadcrumb-item:hover {
+                opacity: 0.95;
+            }
+            .breadcrumb .breadcrumb-item.active {
+                opacity: 1;
+            }
                 /* Hide scrollbar for Chrome, Safari and Opera */
                 ::-webkit-scrollbar {
                     width: 10px;
@@ -29,7 +42,6 @@
                 ::-webkit-scrollbar-thumb {
                     background: #86959c;
                     border: 0px none #ffffff;
-                    border-radius: 14px;
                 }
 
                 ::-webkit-scrollbar-thumb:hover {
@@ -43,7 +55,6 @@
                 ::-webkit-scrollbar-track {
                     background: #d6dadc;
                     border: 0px none #ffffff;
-                    border-radius: 14px;
                 }
 
                 ::-webkit-scrollbar-track:hover {
@@ -57,6 +68,49 @@
                 ::-webkit-scrollbar-corner {
                     background: transparent;
                 }
+
+            .menu-header {
+
+            }
+            .menu-header::-webkit-scrollbar {
+                    width: 2px;
+                    height: 2px;
+                }
+
+                .menu-header::-webkit-scrollbar-button {
+                    width: 0px;
+                    height: 0px;
+                }
+
+                .menu-header::-webkit-scrollbar-thumb {
+                    background: #1d4ed8;
+                    border: 0px none #ffffff;
+                }
+
+                .menu-header::-webkit-scrollbar-thumb:hover {
+                    background: #1d4ed8;
+                }
+
+                .menu-header::-webkit-scrollbar-thumb:active {
+                    background: #0ea5e9;
+                }
+
+                .menu-header::-webkit-scrollbar-track {
+                    background: #bae6fd;
+                    border: 0px none #ffffff;
+                }
+
+                .menu-header::-webkit-scrollbar-track:hover {
+                    background: #bae6fd;
+                }
+
+                .menu-header::-webkit-scrollbar-track:active {
+                    background: #bae6fd;
+                }
+
+                .menu-header::-webkit-scrollbar-corner {
+                    background: transparent;
+                }
         }
       </style>
     <title>Admin003</title>
@@ -68,266 +122,213 @@
             continuar.</strong>
     </noscript>
     <div>
-        <div id="theme" class="flex h-screen w-screen shrink bg-gray-100 dark:bg-black">
-            <aside id="sidemenu" class="
-              flex flex-col
-              dark:bg-gray-900 dark:text-gray-200
-              bg-gray-200
-              text-gray-700
-            ">
-                <div class="flex flex-col items-center justify-start h-24 w-24 shrink">
-                    <div class="
-                  flex flex-col
-                  items-center
-                  justify-center
-                  w-16
-                  h-16
-                  relative
-                  shrink
-                ">
-                        <img src="images/logo.png" />
-                    </div>
+        <div id="theme" class="flex flex-col bg-blue-50/50 dark:bg-black">
+            <nav class="flex items-center justify-between px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-400">
+                <div class="flex items-center shrink text-white">
+                    <svg class="fill-current h-8 w-8 mr-2" width="60" height="60" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 60 60">
+                        <path class="b"
+                            d="M5.27,55.06c-2.36,.02-4.29-1.89-4.3-4.25,0-.47,.07-.94,.22-1.38,.02-.05,.04-.1,.06-.15C5.99,36.51,10.81,23.76,15.69,11.04c1.98-5.18,3.11-5.99,8.42-6.03,8.99-.06,17.97-.15,26.95,.08,2.27,.03,4.47,.81,6.26,2.21,1.14,1.03,1.69,3.83,1.16,5.4-2.53,7.54-5.26,15.03-8.41,22.33-1.76,4.01-5.63,6.7-10,6.94-6.07,.36-12.18,.17-18.26,.06h-.04c-1.71,.02-3.11-1.34-3.13-3.05,0-.23,.02-.45,.07-.68,1.03-5.65,3.41-7.18,9.52-7.2,3.97-.01,7.95,0,12.28,0,1.87-4.86,3.64-9.44,5.78-15-7.47-.03-14.19,.13-21.22,.04L11.57,51.08c-.93,2.4-3.23,3.98-5.81,3.98h-.5Z" />
+                    </svg>
+                    <span class="font-semibold text-xl tracking-tight">Admin003</span>
                 </div>
-                <ul class="flex-grow overflow-y-auto">
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://prodam.dev" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
-                                    clip-rule="evenodd" />
-                            </svg>
 
-                            <span class="text-xs text-center">Projeto Design Patterns</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
+                <div class="flex items-center justify-start h-auto grow px-8">
+                    <ul class="flex overflow-x-auto menu-header py-2">
+                        <li class="flex-shrink-0 px-2 hover:bg-sky-500 transition-all text-blue-50 
+                                                rounded-md hover:text-white">
+                            <a href="https://prodam.dev" class="
+                                                flex
+                                                justify-start
+                                                items-center
+                                                p-2
+                                            ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden lg:block"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                                        clip-rule="evenodd" />
+                                </svg>
 
-                            <span class="text-xs text-center">Templates</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev/admin" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z"
-                                    clip-rule="evenodd" />
-                            </svg>
+                                <span class="text-center pl-2">Projeto Design Patterns</span>
+                            </a>
+                        </li>
+                        <li class="flex-shrink-0 px-2 hover:bg-sky-500 transition-all text-blue-50 
+                                                                        rounded-md hover:text-white">
+                            <a href="https://templates.prodam.dev/" class="
+                                                                        flex
+                                                                        justify-start
+                                                                        items-center
+                                                                        p-2
+                                                                    ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
 
-                            <span class="text-xs text-center">Templates Admin</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev/admin/admin001" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
-                            </svg>
+                                <span class="text-center pl-2">Templates</span>
+                            </a>
+                        </li>
+                        <li class="flex-shrink-0 px-2 hover:bg-sky-500 transition-all text-blue-50 
+                                                                        rounded-md hover:text-white">
+                            <a href="https://templates.prodam.dev/admin" class="
+                                                                        flex
+                                                                        justify-start
+                                                                        items-center
+                                                                        p-2
+                                                                    ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z"
+                                        clip-rule="evenodd" />
+                                </svg>
 
-                            <span class="text-xs text-center">Admin 001</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev/admin/admin002" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
-                            </svg>
+                                <span class="text-center pl-2">Templates Admin</span>
+                            </a>
+                        </li>
+                        <li class="flex-shrink-0 px-2 hover:bg-sky-500 transition-all text-blue-50 
+                                                                        rounded-md hover:text-white">
+                            <a href="https://templates.prodam.dev/admin/admin001" class="
+                                                                        flex
+                                                                        justify-start
+                                                                        items-center
+                                                                        p-2
+                                                                    ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path
+                                        d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                                </svg>
 
-                            <span class="text-xs text-center">Admin 002</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev/admin/admin003" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
-                            </svg>
+                                <span class="text-center pl-2">Admin 001</span>
+                            </a>
+                        </li>
+                        <li class="flex-shrink-0 px-2 hover:bg-sky-500 transition-all text-blue-50 
+                                                                        rounded-md hover:text-white">
+                            <a href="https://templates.prodam.dev/admin/admin002" class="
+                                                                        flex
+                                                                        justify-start
+                                                                        items-center
+                                                                        p-2
+                                                                    ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path
+                                        d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                                </svg>
 
-                            <span class="text-xs text-center">Admin 003</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev/admin/admin004" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
-                            </svg>
+                                <span class="text-center pl-2">Admin 002</span>
+                            </a>
+                        </li>
+                        <li class="flex-shrink-0 px-2 hover:bg-sky-500 transition-all text-blue-50 
+                                                                        rounded-md hover:text-white">
+                            <a href="https://templates.prodam.dev/admin/admin003" class="
+                                                                        flex
+                                                                        justify-start
+                                                                        items-center
+                                                                        p-2
+                                                                    ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path
+                                        d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                                </svg>
 
-                            <span class="text-xs text-center">Admin 004</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev/admin/admin005" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
-                            </svg>
+                                <span class="text-center pl-2">Admin 003</span>
+                            </a>
+                        </li>
+                        <li class="flex-shrink-0 px-2 hover:bg-sky-500 transition-all text-blue-50 
+                                                                        rounded-md hover:text-white">
+                            <a href="https://templates.prodam.dev/admin/admin004" class="
+                                                                        flex
+                                                                        justify-start
+                                                                        items-center
+                                                                        p-2
+                                                                    ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path
+                                        d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                                </svg>
 
-                            <span class="text-xs text-center">Admin 005</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev/admin/admin006" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
-                            </svg>
+                                <span class="text-center pl-2">Admin 004</span>
+                            </a>
+                        </li>
+                        <li
+                            class="flex-shrink-0 px-2 hover:bg-sky-500 transition-all text-blue-50 
+                                                                                                rounded-md hover:text-white">
+                            <a href="https://templates.prodam.dev/admin/admin005" class="
+                                                                                                flex
+                                                                                                justify-start
+                                                                                                items-center
+                                                                                                p-2
+                                                                                            ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path
+                                        d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                                </svg>
 
-                            <span class="text-xs text-center">Admin 006</span>
-                        </a>
-                    </li>
-                    <li class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <a href="https://templates.prodam.dev/admin/admin007" class="
-                            flex flex-col
-                            justify-center
-                            items-center
-                            h-24
-                            w-24
-                            text-gray-600
-                            dark:text-gray-200
-                        ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
-                            </svg>
-
-                            <span class="text-xs text-center">Admin 007</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="flex flex-col items-strech justify-center">
-                    <div class="flex flex-col items-center justify-center w-16 h-16 relative">
-                        <p>v1.0</p>
-                    </div>
+                                <span class="text-center pl-2">Admin 005</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </aside>
-            <div class="flex flex-col w-full bg-gray-300">
-                <div class="flex shrink w-full p-2">
-                    <div class="flex flex-col w-full md:1/3 lg:2/5">
-                        <h1 class="font-black text-3xl text-gray-900 dark:text-gray-100">
-                            Versão A - Menu Lateral - Menu local
-                        </h1>
-                        <h2 class="text-gray-700 dark:text-gray-200">Sub descrição</h2>
-                    </div>
-                    <div class="flex justify-end w-full md:2/3 lg:3/5">
-                        <div class="flex justify-end items-center shrink">
+
+                <div class="flex items-center justify-start grow">
+                    <div class="flex items-center justify-start w-full">
+                        <div class="flex">
                             <a href="/user" class="
-                      flex
-                      justify-center
-                      items-center
-                      hover:bg-white
-                      p-2
-                      rounded-full
-                    ">
-                                <span class="mr-3">Nome do usuário</span>
-                                <img src="images/avatar.svg" alt="Avatar"
-                                    class="h-10 w-10 rounded-full cursor-pointer" />
+                                                flex
+                                                justify-center
+                                                items-center
+                                                overflow-hidden
+                                                border
+                                                border-teal-400
+                                                hover:border-white
+                                                h-12 w-12
+                                                rounded-full
+                                            "><img src="https://avatars0.githubusercontent.com/u/56918?s=460&v=4"
+                                    alt="">
                             </a>
                         </div>
-                        <div class="flex justify-end items-center shrink">
+                        <div class="flex w-full justify-center items-stretch text-blue-50 text-center">
+                            <a href="/user" class="
+                                                flex
+                                                flex-col
+                                                w-full
+                                                justify-center
+                                                items-center
+                                                border
+                                                border-transparent
+                                                hover:border-white
+                                                rounded-md
+                                                ml-2
+                                                p-1
+                                            ">
+                                <span class="font-semibold">Nome do Usuário</span>
+                                <span>Secretaria</span>
+                            </a>
+                        </div>
+                        <div class="flex justify-center items-stretch text-blue-50 text-center">
                             <a class="
-                      flex flex-col
-                      justify-center
-                      items-center
-                      text-gray-600
-                      dark:text-gray-200
-                      text-red-600
-                      hover:bg-red-400
-                      rounded-full
-                      cursor-pointer
-                      hover:text-white
-                      dark:text-red-400 dark:hover:text-white
-                      p-4
-                      ml-2
-                    ">
+                                                flex flex-col
+                                                justify-center
+                                                items-center
+                                                w-full
+                                                cursor-pointer
+                                                py-4
+                                                ml-2
+                                                text-white
+                                                border
+                                                border-white
+                                                hover:border-red-600
+                                                hover:text-red-600
+                                                rounded-md
+                                                ">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -337,362 +338,365 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex shrink w-full p-2">
-                    <div class="flex flex-col w-full">
-                        <ul class="flex">
-                            <li>
-                                <a href="/" class="
-                                    flex flex-col
-                                    justify-center
-                                    items-center
-                                    rounded-lg
-                                    p-2
-                                    mr-2
-                                    bg-gray-50/25
-                                    hover:bg-gray-100
-                                    dark:hover:bg-gray-700
-                                    text-gray-600
-                                    dark:text-gray-200
-                                ">
-                                    <span class="text-xs text-center"> Submenu </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/" class="
-                                flex flex-col
-                                justify-center
-                                items-center
-                                rounded-lg
-                                p-2
-                                mr-2
-                                bg-gray-50/25
-                                hover:bg-gray-100
-                                dark:hover:bg-gray-700
-                                text-gray-600
-                                dark:text-gray-200
-                                ">
-                                    <span class="text-xs text-center"> Submenu </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/" class="
-                                    flex flex-col
-                                    justify-center
-                                    items-center
-                                    rounded-lg
-                                    p-2
-                                    mr-2
-                                    bg-gray-50/25
-                                    hover:bg-gray-100
-                                    dark:hover:bg-gray-700
-                                    text-gray-600
-                                    dark:text-gray-200
-                                ">
-                                    <span class="text-xs text-center"> Submenu </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="block lg:hidden">
+                    <button
+                        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">Menu</button>
                 </div>
-                <div class="flex flex-col p-2 bg-gray-100 dark:text-white overflow-y-auto px-8 py-8">
-                    <div class="flex justify-start items-center">
-                        <h2 class="text-2xl font-bold text-gray-700 mb-4">
-                            Template Admin 001
-                        </h2>
-                    </div>
-                    <div class="flex justify-start items-center">
-                        <p>
-                            Menu lateral e menu local.
-                            <br>
-                            Cores e estilos personalizáveis.
-                            <br>
-                            Utilização de TailwindCSS.
-                        </p>
-                    </div>
-                    <div class="flex flex-col justify-start items-stretch">
-
-                        <div class="flex justify-start items-stretch my-4">
-                            <div class="flex flex-col w-full md:w-1/4 lg:w-1/43">
-                                <h3 class="text-lg font-medium leading-6 text-gray-900">Perfil</h3>
-                                <p class="mt-1 text-sm text-gray-600">Essas informações serão exibidas em seu perfil.
-                                </p>
+            </nav>
+            <main class="flex-1 w-full">
+                <div class="flex flex-col">
+                    <section class="flex flex-col">
+                        <div
+                            class="flex justify-start items-stretch breadcrumb italic bg-gradient-to-r from-blue-600 to-teal-400">
+                            <div class="container mx-auto text-blue-50">
+                                <a href="index.html" class="breadcrumb-item"> Home </a>
+                                <a href="index.html" class="breadcrumb-item">Admin</a>
+                                <span class="breadcrumb-item active">Admin003</span>
                             </div>
-                            <div
-                                class="flex justify-start items-stretch w-full md:w-3/4 lg:w-3/4 border border-gray-300 rounded-lg">
-                                <form class="flex w-full justify-start items-stretch" action="#" method="POST">
-                                    <div class="flex flex-col w-full sm:rounded-md sm:overflow-hidden">
-                                        <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-                                            <div class="grid grid-cols-3 gap-6">
-                                                <div class="col-span-3 sm:col-span-2">
-                                                    <label for="company-website"
-                                                        class="block text-sm font-medium text-gray-700"> Site
-                                                    </label>
-                                                    <div class="mt-1 flex rounded-md shadow-sm">
-                                                        <span
-                                                            class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
-                                                            https:// </span>
-                                                        <input type="text" name="company-website" id="company-website"
-                                                            class="focus:ring-blue-500 focus:border-blue-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
-                                                            placeholder="www" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col justify-start items-stretch py-4 pb-32 bg-gradient-to-r from-blue-600 to-teal-400">
+                            <div class="container mx-auto">
+                                <h2 class="text-2xl text-blue-50">Página Inicial</h2>
+                            </div>
+                        </div>
+                        <div class="container mx-auto -mt-28">
+                            <div class="flex flex-col justify-start items-stretch">
 
-                                            <div>
-                                                <label for="about" class="block text-sm font-medium text-gray-700">
-                                                    Sobre </label>
-                                                <div class="mt-1">
-                                                    <textarea id="about" name="about" rows="3"
-                                                        class="shadow-sm focus:ring-blue-500 focus:border-blue-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
-                                                        placeholder="..."></textarea>
-                                                </div>
-                                                <p class="mt-2 text-sm text-gray-500">Breve descrição.</p>
-                                            </div>
-
-                                            <div>
-                                                <label class="block text-sm font-medium text-gray-700"> Foto
-                                                </label>
-                                                <div class="mt-1 flex items-center">
-                                                    <span
-                                                        class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
-                                                        <svg class="h-full w-full text-gray-300" fill="currentColor"
-                                                            viewBox="0 0 24 24">
-                                                            <path
-                                                                d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                                                        </svg>
-                                                    </span>
-                                                    <button type="button"
-                                                        class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Trocar</button>
-                                                </div>
-                                            </div>
-
-                                            <div>
-                                                <label class="block text-sm font-medium text-gray-700"> Imagem de perfil
-                                                </label>
-                                                <div
-                                                    class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                                                    <div class="space-y-1 text-center">
-                                                        <svg class="mx-auto h-12 w-12 text-gray-400"
-                                                            stroke="currentColor" fill="none" viewBox="0 0 48 48"
-                                                            aria-hidden="true">
-                                                            <path
-                                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                                                stroke-width="2" stroke-linecap="round"
-                                                                stroke-linejoin="round" />
-                                                        </svg>
-                                                        <div class="flex text-sm text-gray-600">
-                                                            <label for="file-upload"
-                                                                class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
-                                                                <span>Enviar arquivo</span>
-                                                                <input id="file-upload" name="file-upload" type="file"
-                                                                    class="sr-only" />
+                                <div class="flex justify-start items-start my-4 gap-4">
+                                    <div
+                                        class="flex flex-col bg-white p-4 rounded-lg border border-blue-300 rounded-lg w-full md:w-1/4 lg:w-1/43">
+                                        <h3 class="text-lg font-medium leading-6 text-zinc-900">Perfil</h3>
+                                        <p class="mt-1 text-sm text-zinc-600">Essas informações serão exibidas em seu
+                                            perfil.
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex justify-start items-stretch w-full md:w-3/4 lg:w-3/4 border border-blue-300 rounded-lg">
+                                        <form class="flex w-full justify-start items-stretch" action="#" method="POST">
+                                            <div class="flex flex-col w-full sm:rounded-md sm:overflow-hidden">
+                                                <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                                                    <div class="grid grid-cols-3 gap-6">
+                                                        <div class="col-span-3 sm:col-span-2">
+                                                            <label for="company-website"
+                                                                class="block text-sm font-medium text-zinc-700"> Site
                                                             </label>
-                                                            <p class="pl-1">ou arraste e solte-o aqui</p>
+                                                            <div class="mt-1 flex rounded-md shadow-sm">
+                                                                <span
+                                                                    class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-zinc-300 bg-zinc-50 text-zinc-500 text-sm">
+                                                                    https:// </span>
+                                                                <input type="text" name="company-website"
+                                                                    id="company-website"
+                                                                    class="focus:ring-blue-500 focus:border-blue-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-zinc-300"
+                                                                    placeholder="www" />
+                                                            </div>
                                                         </div>
-                                                        <p class="text-xs text-gray-500">PNG, JPG, GIF até 10MB
-                                                        </p>
                                                     </div>
+
+                                                    <div>
+                                                        <label for="about"
+                                                            class="block text-sm font-medium text-zinc-700">
+                                                            Sobre </label>
+                                                        <div class="mt-1">
+                                                            <textarea id="about" name="about" rows="3"
+                                                                class="shadow-sm focus:ring-blue-500 focus:border-blue-500 mt-1 block w-full sm:text-sm border border-zinc-300 rounded-md"
+                                                                placeholder="..."></textarea>
+                                                        </div>
+                                                        <p class="mt-2 text-sm text-zinc-500">Breve descrição.</p>
+                                                    </div>
+
+                                                    <div>
+                                                        <label class="block text-sm font-medium text-zinc-700"> Foto
+                                                        </label>
+                                                        <div class="mt-1 flex items-center">
+                                                            <span
+                                                                class="inline-block h-12 w-12 rounded-full overflow-hidden bg-zinc-100">
+                                                                <svg class="h-full w-full text-zinc-300"
+                                                                    fill="currentColor" viewBox="0 0 24 24">
+                                                                    <path
+                                                                        d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                                                </svg>
+                                                            </span>
+                                                            <button type="button"
+                                                                class="ml-5 bg-white py-2 px-3 border border-zinc-300 rounded-md shadow-sm text-sm leading-4 font-medium text-zinc-700 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Trocar</button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <label class="block text-sm font-medium text-zinc-700"> Imagem
+                                                            de
+                                                            perfil
+                                                        </label>
+                                                        <div
+                                                            class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-zinc-300 border-dashed rounded-md">
+                                                            <div class="space-y-1 text-center">
+                                                                <svg class="mx-auto h-12 w-12 text-zinc-400"
+                                                                    stroke="currentColor" fill="none"
+                                                                    viewBox="0 0 48 48" aria-hidden="true">
+                                                                    <path
+                                                                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                                <div class="flex text-sm text-zinc-600">
+                                                                    <label for="file-upload"
+                                                                        class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                                                                        <span>Enviar arquivo</span>
+                                                                        <input id="file-upload" name="file-upload"
+                                                                            type="file" class="sr-only" />
+                                                                    </label>
+                                                                    <p class="pl-1">ou arraste e solte-o aqui</p>
+                                                                </div>
+                                                                <p class="text-xs text-zinc-500">PNG, JPG, GIF até 10MB
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="px-4 py-3 bg-zinc-50 text-right sm:px-6">
+                                                    <button type="submit"
+                                                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Salvar</button>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                            <button type="submit"
-                                                class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Salvar</button>
-                                        </div>
+                                        </form>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
+                                </div>
 
-                        <div class="flex justify-start items-start my-4">
-                            <div class="flex flex-col w-full md:w-1/4 lg:w-1/4">
-                                <h3 class="text-lg font-medium leading-6 text-gray-900">Informações pessoais
-                                </h3>
-                                <p class="mt-1 text-sm text-gray-600">Endereço para receber correspondência.</p>
-                            </div>
-                            <div
-                                class="flex justify-start items-stretch w-full md:w-3/4 lg:w-3/4 border border-gray-300 rounded-lg">
-                                <form class="flex w-full justify-start items-stretch" action="#" method="POST">
-                                    <div class="flex flex-col w-full overflow-hidden sm:rounded-md">
-                                        <div class="px-4 py-5 bg-white sm:p-6">
-                                            <div class="grid grid-cols-6 gap-6">
-                                                <div class="col-span-6 sm:col-span-3">
-                                                    <label for="first-name"
-                                                        class="block text-sm font-medium text-gray-700">Nome</label>
-                                                    <input type="text" name="first-name" id="first-name"
-                                                        autocomplete="given-name"
-                                                        class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                                <div class="flex justify-start items-start my-4 gap-4">
+                                    <div
+                                        class="flex flex-col bg-white p-4 rounded-lg border border-blue-300 rounded-lg w-full md:w-1/4 lg:w-1/4">
+                                        <h3 class="text-lg font-medium leading-6 text-zinc-900">Informações pessoais
+                                        </h3>
+                                        <p class="mt-1 text-sm text-zinc-600">Endereço para receber correspondência.</p>
+                                    </div>
+                                    <div
+                                        class="flex justify-start items-stretch w-full md:w-3/4 lg:w-3/4 border border-blue-300 rounded-lg">
+                                        <form class="flex w-full justify-start items-stretch" action="#" method="POST">
+                                            <div class="flex flex-col w-full overflow-hidden sm:rounded-md">
+                                                <div class="px-4 py-5 bg-white sm:p-6">
+                                                    <div class="grid grid-cols-6 gap-6">
+                                                        <div class="col-span-6 sm:col-span-3">
+                                                            <label for="first-name"
+                                                                class="block text-sm font-medium text-zinc-700">Nome</label>
+                                                            <input type="text" name="first-name" id="first-name"
+                                                                autocomplete="given-name"
+                                                                class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-zinc-300 rounded-md" />
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-3">
+                                                            <label for="last-name"
+                                                                class="block text-sm font-medium text-zinc-700">Sobrenome</label>
+                                                            <input type="text" name="last-name" id="last-name"
+                                                                autocomplete="family-name"
+                                                                class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-zinc-300 rounded-md" />
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-4">
+                                                            <label for="email-address"
+                                                                class="block text-sm font-medium text-zinc-700">Email</label>
+                                                            <input type="text" name="email-address" id="email-address"
+                                                                autocomplete="email"
+                                                                class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-zinc-300 rounded-md" />
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-3">
+                                                            <label for="country"
+                                                                class="block text-sm font-medium text-zinc-700">País</label>
+                                                            <select id="country" name="country"
+                                                                autocomplete="country-name"
+                                                                class="mt-1 block w-full py-2 px-3 border border-zinc-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                                                <option>Brasil</option>
+                                                                <option>Argentina</option>
+                                                                <option>Alemanha</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-span-6">
+                                                            <label for="street-address"
+                                                                class="block text-sm font-medium text-zinc-700">Endereço</label>
+                                                            <input type="text" name="street-address" id="street-address"
+                                                                autocomplete="street-address"
+                                                                class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-zinc-300 rounded-md" />
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                                                            <label for="city"
+                                                                class="block text-sm font-medium text-zinc-700">Cidade</label>
+                                                            <input type="text" name="city" id="city"
+                                                                autocomplete="address-level2"
+                                                                class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-zinc-300 rounded-md" />
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                                                            <label for="region"
+                                                                class="block text-sm font-medium text-zinc-700">Estado /
+                                                                Província</label>
+                                                            <input type="text" name="region" id="region"
+                                                                autocomplete="address-level1"
+                                                                class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-zinc-300 rounded-md" />
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                                                            <label for="postal-code"
+                                                                class="block text-sm font-medium text-zinc-700">ZIP /
+                                                                Código
+                                                                Postal / CEP</label>
+                                                            <input type="text" name="postal-code" id="postal-code"
+                                                                autocomplete="postal-code"
+                                                                class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-zinc-300 rounded-md" />
+                                                        </div>
+                                                    </div>
                                                 </div>
-
-                                                <div class="col-span-6 sm:col-span-3">
-                                                    <label for="last-name"
-                                                        class="block text-sm font-medium text-gray-700">Sobrenome</label>
-                                                    <input type="text" name="last-name" id="last-name"
-                                                        autocomplete="family-name"
-                                                        class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                                                </div>
-
-                                                <div class="col-span-6 sm:col-span-4">
-                                                    <label for="email-address"
-                                                        class="block text-sm font-medium text-gray-700">Email</label>
-                                                    <input type="text" name="email-address" id="email-address"
-                                                        autocomplete="email"
-                                                        class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                                                </div>
-
-                                                <div class="col-span-6 sm:col-span-3">
-                                                    <label for="country"
-                                                        class="block text-sm font-medium text-gray-700">País</label>
-                                                    <select id="country" name="country" autocomplete="country-name"
-                                                        class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
-                                                        <option>Brasil</option>
-                                                        <option>Argentina</option>
-                                                        <option>Alemanha</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="col-span-6">
-                                                    <label for="street-address"
-                                                        class="block text-sm font-medium text-gray-700">Endereço</label>
-                                                    <input type="text" name="street-address" id="street-address"
-                                                        autocomplete="street-address"
-                                                        class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                                                </div>
-
-                                                <div class="col-span-6 sm:col-span-6 lg:col-span-2">
-                                                    <label for="city"
-                                                        class="block text-sm font-medium text-gray-700">Cidade</label>
-                                                    <input type="text" name="city" id="city"
-                                                        autocomplete="address-level2"
-                                                        class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                                                </div>
-
-                                                <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                                                    <label for="region"
-                                                        class="block text-sm font-medium text-gray-700">Estado /
-                                                        Província</label>
-                                                    <input type="text" name="region" id="region"
-                                                        autocomplete="address-level1"
-                                                        class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                                                </div>
-
-                                                <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                                                    <label for="postal-code"
-                                                        class="block text-sm font-medium text-gray-700">ZIP / Código
-                                                        Postal / CEP</label>
-                                                    <input type="text" name="postal-code" id="postal-code"
-                                                        autocomplete="postal-code"
-                                                        class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                                                <div class="px-4 py-3 bg-zinc-50 text-right sm:px-6">
+                                                    <button type="submit"
+                                                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Salvar</button>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                            <button type="submit"
-                                                class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Salvar</button>
-                                        </div>
+                                        </form>
                                     </div>
-                                </form>
+                                </div>
+
+                                <div class="flex justify-start items-start my-4 gap-4">
+                                    <div
+                                        class="flex flex-col w-full bg-white p-4 rounded-lg border border-blue-300 rounded-lg md:w-1/4 lg:w-1/4">
+                                        <h3 class="text-lg font-medium leading-6 text-zinc-900">Notificações</h3>
+                                        <p class="mt-1 text-sm text-zinc-600">Verifique quais notificações gostaria de
+                                            receber.</p>
+                                    </div>
+                                    <div
+                                        class="flex justify-start items-stretch w-full md:w-3/4 lg:w-3/4 border border-blue-300 rounded-lg">
+                                        <form class="flex w-full justify-start items-stretch" action="#" method="POST">
+                                            <div class="flex flex-col w-full overflow-hidden sm:rounded-md">
+                                                <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                                                    <fieldset>
+                                                        <legend class="text-base font-medium text-zinc-900">Email
+                                                        </legend>
+                                                        <div class="mt-4 space-y-4">
+                                                            <div class="flex items-start">
+                                                                <div class="flex items-center h-5">
+                                                                    <input id="comments" name="comments" type="checkbox"
+                                                                        class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-zinc-300 rounded" />
+                                                                </div>
+                                                                <div class="ml-3 text-sm">
+                                                                    <label for="comments"
+                                                                        class="font-medium text-zinc-700">Comentários</label>
+                                                                    <p class="text-zinc-500">Seja notificado quando
+                                                                        alguém
+                                                                        comentar em seu tópico.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex items-start">
+                                                                <div class="flex items-center h-5">
+                                                                    <input id="candidates" name="candidates"
+                                                                        type="checkbox"
+                                                                        class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-zinc-300 rounded" />
+                                                                </div>
+                                                                <div class="ml-3 text-sm">
+                                                                    <label for="candidates"
+                                                                        class="font-medium text-zinc-700">Candidatos</label>
+                                                                    <p class="text-zinc-500">Seja notificado quando um
+                                                                        candidato
+                                                                        se candidatar.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex items-start">
+                                                                <div class="flex items-center h-5">
+                                                                    <input id="offers" name="offers" type="checkbox"
+                                                                        class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-zinc-300 rounded" />
+                                                                </div>
+                                                                <div class="ml-3 text-sm">
+                                                                    <label for="offers"
+                                                                        class="font-medium text-zinc-700">Promoções</label>
+                                                                    <p class="text-zinc-500">Seja notificado sobre
+                                                                        promoções
+                                                                        e
+                                                                        ofertas.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <div>
+                                                            <legend class="text-base font-medium text-zinc-900">
+                                                                Notificações
+                                                                em
+                                                                seu celular</legend>
+                                                            <p class="text-sm text-zinc-500">Essas notificações são
+                                                                enviadas
+                                                                por
+                                                                SMS para seu celular.</p>
+                                                        </div>
+                                                        <div class="mt-4 space-y-4">
+                                                            <div class="flex items-center">
+                                                                <input id="push-everything" name="push-notifications"
+                                                                    type="radio"
+                                                                    class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-zinc-300" />
+                                                                <label for="push-everything"
+                                                                    class="ml-3 block text-sm font-medium text-zinc-700">
+                                                                    Todas </label>
+                                                            </div>
+                                                            <div class="flex items-center">
+                                                                <input id="push-email" name="push-notifications"
+                                                                    type="radio"
+                                                                    class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-zinc-300" />
+                                                                <label for="push-email"
+                                                                    class="ml-3 block text-sm font-medium text-zinc-700">
+                                                                    As mesmas do email </label>
+                                                            </div>
+                                                            <div class="flex items-center">
+                                                                <input id="push-nothing" name="push-notifications"
+                                                                    type="radio"
+                                                                    class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-zinc-300" />
+                                                                <label for="push-nothing"
+                                                                    class="ml-3 block text-sm font-medium text-zinc-700">
+                                                                    Nenhuma </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="px-4 py-3 bg-zinc-50 text-right sm:px-6">
+                                                    <button type="submit"
+                                                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Salvar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
-                        <div class="flex justify-start items-start my-4">
-                            <div class="flex flex-col w-full md:w-1/4 lg:w-1/4">
-                                <h3 class="text-lg font-medium leading-6 text-gray-900">Notificações</h3>
-                                <p class="mt-1 text-sm text-gray-600">Verifique quais notificações gostaria de
-                                    receber.</p>
-                            </div>
-                            <div
-                                class="flex justify-start items-stretch w-full md:w-3/4 lg:w-3/4 border border-gray-300 rounded-lg">
-                                <form class="flex w-full justify-start items-stretch" action="#" method="POST">
-                                    <div class="flex flex-col w-full overflow-hidden sm:rounded-md">
-                                        <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-                                            <fieldset>
-                                                <legend class="text-base font-medium text-gray-900">Email
-                                                </legend>
-                                                <div class="mt-4 space-y-4">
-                                                    <div class="flex items-start">
-                                                        <div class="flex items-center h-5">
-                                                            <input id="comments" name="comments" type="checkbox"
-                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded" />
-                                                        </div>
-                                                        <div class="ml-3 text-sm">
-                                                            <label for="comments"
-                                                                class="font-medium text-gray-700">Comentários</label>
-                                                            <p class="text-gray-500">Seja notificado quando alguém
-                                                                comentar em seu tópico.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="flex items-start">
-                                                        <div class="flex items-center h-5">
-                                                            <input id="candidates" name="candidates" type="checkbox"
-                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded" />
-                                                        </div>
-                                                        <div class="ml-3 text-sm">
-                                                            <label for="candidates"
-                                                                class="font-medium text-gray-700">Candidatos</label>
-                                                            <p class="text-gray-500">Seja notificado quando um candidato
-                                                                se candidatar.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="flex items-start">
-                                                        <div class="flex items-center h-5">
-                                                            <input id="offers" name="offers" type="checkbox"
-                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded" />
-                                                        </div>
-                                                        <div class="ml-3 text-sm">
-                                                            <label for="offers"
-                                                                class="font-medium text-gray-700">Promoções</label>
-                                                            <p class="text-gray-500">Seja notificado sobre promoções e
-                                                                ofertas.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                            <fieldset>
-                                                <div>
-                                                    <legend class="text-base font-medium text-gray-900">Notificações em
-                                                        seu celular</legend>
-                                                    <p class="text-sm text-gray-500">Essas notificações são enviadas por
-                                                        SMS para seu celular.</p>
-                                                </div>
-                                                <div class="mt-4 space-y-4">
-                                                    <div class="flex items-center">
-                                                        <input id="push-everything" name="push-notifications"
-                                                            type="radio"
-                                                            class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300" />
-                                                        <label for="push-everything"
-                                                            class="ml-3 block text-sm font-medium text-gray-700">
-                                                            Todas </label>
-                                                    </div>
-                                                    <div class="flex items-center">
-                                                        <input id="push-email" name="push-notifications" type="radio"
-                                                            class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300" />
-                                                        <label for="push-email"
-                                                            class="ml-3 block text-sm font-medium text-gray-700">
-                                                            As mesmas do email </label>
-                                                    </div>
-                                                    <div class="flex items-center">
-                                                        <input id="push-nothing" name="push-notifications" type="radio"
-                                                            class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300" />
-                                                        <label for="push-nothing"
-                                                            class="ml-3 block text-sm font-medium text-gray-700">
-                                                            Nenhuma </label>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                        </div>
-                                        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                            <button type="submit"
-                                                class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Salvar</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
+                    </section>
                 </div>
-            </div>
+            </main>
+            <footer class="flex justify-between items-center p-2 bg-gradient-to-r from-sky-600 to-teal-400/50">
+                <div class="flex items-center text-white">
+                    <svg class="fill-current h-16 w-16" width="60" height="60" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 281.05901 63">
+                        <path
+                            d="M193.91522,8a4.22482,4.22482,0,0,1,3.95393,5.71768c-.175.46271-.35188.931-.53467,1.42479q-7.00248,18.9153-14.25727,37.73676c-2.2953,5.94372-10.11018,5.64824-11.94209,3.57384-.73952,1.49039-5.59056,1.42767-8.12962,1.53249-5.31.2192-10.63757.14953-15.95431.03356-5.8848-.12837-8.09543-3.21566-6.155-8.816,2.282-6.5862,4.61825-13.17213,7.35667-19.57616,2.43781-5.701,7.10682-8.61781,13.38585-8.68359,6.97974-.07312,17.94472-.06123,22.40526-.1961,1.065-2.68695,2.22157-5.856,3.36406-8.73857A6.34739,6.34739,0,0,1,193.30817,8ZM173.12691,49.75122c2.07538-5.61111,4.15075-11.22222,6.45651-17.45621h-21.2121l-5.51379,14.762c5.509,0,10.132-.00889,14.75488.00411C169.62852,47.06674,171.7962,46.817,173.12691,49.75122Z"
+                            transform="translate(-8.90095 -8)" />
+                        <path
+                            d="M13.22274,71a4.27535,4.27535,0,0,1-4.08332-5.63034q.027-.07647.05532-.1525,7.126-19.156,14.45183-38.23757c1.97722-5.17523,3.10528-5.99454,8.42192-6.0312,8.98508-.06195,17.97441-.15111,26.95389.08183a10.35989,10.35989,0,0,1,6.2628,2.21377c1.14073,1.02827,1.68929,3.83294,1.16488,5.39875-2.52508,7.53955-5.25894,15.03274-8.41022,22.33013a11.62839,11.62839,0,0,1-10.00259,6.94236c-6.06974.36424-12.17615.16585-18.26477.063l-.03586-.00079a3.08788,3.08788,0,0,1-3.06435-3.722c1.0324-5.64545,3.41182-7.18155,9.52467-7.20163,3.973-.013,7.94617-.00235,12.2817-.00235,1.87135-4.85577,3.6381-9.44011,5.77927-14.996-7.46725-.02713-14.18727.13431-21.22285.04469L19.53091,67.02047A6.22467,6.22467,0,0,1,13.72523,71Z"
+                            transform="translate(-8.90095 -8)" />
+                        <path
+                            d="M250.18319,52.6817c2.45062-6.62627,4.9026-13.25617,7.5151-20.32007h-8.15468c-2.44618,6.3893-4.92545,12.89266-7.42578,19.38792-2.02476,5.25985-3.912,6.83267-8.94758,6.04293a3.34409,3.34409,0,0,1-2.75262-3.84546,9.84669,9.84669,0,0,1,.45964-1.85511c3.22278-8.74155,6.64833-17.40836,9.86941-26.15051,1.27117-3.45005,3.56506-5.019,7.17022-5.01041,11.66407.0278,23.32972-.09986,34.99173.05641,6.06124.08122,8.37225,3.59793,6.31818,9.3472C286.70766,37.38552,284.014,44.375,281.332,51.36655c-2.043,5.32565-3.35223,6.86174-7.99814,6.56031a4.0597,4.0597,0,0,1-3.68575-4.8791,8.95,8.95,0,0,1,.28717-1.05873c1.671-4.879,3.60066-9.669,5.4-14.5047.5673-1.52463,1.04394-3.083,1.73765-5.14868h-7.7146s-5.83772,13.79521-8.97493,21.22069c-.6476,1.53281-2.36138,4.22937-4.92185,4.41709-.54553.04-1.08244.07847-1.611.08154A3.97071,3.97071,0,0,1,250.18319,52.6817Z"
+                            transform="translate(-8.90095 -8)" />
+                        <path
+                            d="M214.9868,34.34733a4.11034,4.11034,0,0,1,3.8038,5.49889c-1.34372,3.71124-2.62993,5.2445-6.45852,5.2445-3.16287,0-6.32736-.03107-9.48855.04922-1.03029.02617-3.43694.26665-3.00207,1.45315h19.92386l5.58862-14.60879H201.66923c.57253-5.59968,3.67143-11.057,7.12064-11.0078,7.32287.10448,14.65178-.15,21.97389-.00213,6.12824.12371,8.43138,3.45664,6.37128,9.20775-2.74709,7.669-5.78357,15.234-8.55269,22.89544-1.32972,3.67894-3.74652,5.08093-7.59769,5.02-9.32056-.14744-18.64558.01293-27.96776-.06905-6.219-.05469-8.40426-3.1193-6.52146-9.06736a61.43813,61.43813,0,0,1,2.90124-7.42465c1.815-3.888,5.09783-6.67267,9.15832-6.98129C203.979,34.143,209.44332,34.262,214.9868,34.34733Z"
+                            transform="translate(-8.90095 -8)" />
+                        <path
+                            d="M113.94371,58.04875c-4.16338-.00392-8.329.08275-12.48961-.0254-5.45818-.14189-7.93978-3.02863-6.30113-8.0387a228.989,228.989,0,0,1,8.10932-21.454,12.51065,12.51065,0,0,1,11.57506-7.49823q12.47958-.36129,24.97648-.02369c6.15764.15731,8.29259,3.49854,6.20792,9.356q-3.345,9.39867-7.04979,18.668c-2.419,6.0246-6.91075,9.15253-13.53749,9.03255C121.6054,57.99594,117.77405,58.05268,113.94371,58.04875Zm20.13776-25.82689H112.867c-1.75053,4.69541-3.45372,9.2639-5.38835,14.45317H128.705Z"
+                            transform="translate(-8.90095 -8)" />
+                        <path
+                            d="M86.43955,34.04946l0-1.72971H78.46626c-2.42117,6.26817-4.89641,12.5791-7.29716,18.91824-2.095,5.53173-3.41374,7.05028-8.31211,6.6432a3.76736,3.76736,0,0,1-3.49483-4.14913,5.82258,5.82258,0,0,1,.29132-1.2608c3.2335-8.89457,6.70868-17.701,9.98378-26.58086A6.86572,6.86572,0,0,1,76.819,20.92922c5.31972.04215,10.64323-.10409,15.95922.04316,6.08868.16865,8.23557,3.36383,6.3874,9.23808a27.73609,27.73609,0,0,1-1.75513,4.65266c-1.66654,3.1567-4.36867,4.42749-7.48855,3.69A4.60484,4.60484,0,0,1,86.43955,34.04946Z"
+                            transform="translate(-8.90095 -8)" />
+                    </svg>
+                </div>
+            </footer>
+
+
+
+
         </div>
     </div>
 
