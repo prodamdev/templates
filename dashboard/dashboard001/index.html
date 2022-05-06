@@ -27,8 +27,16 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#192b36",
-                        secondary: '#0c171e',
+                        primary: "#242d47",
+                        secondary: '#171d2d',
+                    },
+                    flexBasis: {
+                        '1/7': '14.2857143%',
+                        '2/7': '28.5714286%',
+                        '3/7': '42.8571429%',
+                        '4/7': '57.1428571%',
+                        '5/7': '71.4285714%',
+                        '6/7': '85.7142857%',
                     }
                 }
             }
@@ -43,111 +51,226 @@
             continuar.</strong>
     </noscript>
     <div>
-        <div id="theme" class="relative flex flex-col shrink bg-gradient-to-r from-primary to-secondary dark:bg-black">
-                <nav id="nav-bar" class="flex dark:text-white text-slate-50/90 px-1 border-b border-slate-400 overflow-hidden">
-                    <div class="w-full flex justify-start items-center shrink">
-                        <div class="flex justify-start items-start shrink text-slate-50/90 w-full h-8">
-                            <a href="" class="flex justify-start items-start">
-                                <svg class="fill-current text-slate-50 h-6 w-6 mr-2 mt-1" width="60" height="60"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-                                    <path class="b"
-                                        d="M5.27,55.06c-2.36,.02-4.29-1.89-4.3-4.25,0-.47,.07-.94,.22-1.38,.02-.05,.04-.1,.06-.15C5.99,36.51,10.81,23.76,15.69,11.04c1.98-5.18,3.11-5.99,8.42-6.03,8.99-.06,17.97-.15,26.95,.08,2.27,.03,4.47,.81,6.26,2.21,1.14,1.03,1.69,3.83,1.16,5.4-2.53,7.54-5.26,15.03-8.41,22.33-1.76,4.01-5.63,6.7-10,6.94-6.07,.36-12.18,.17-18.26,.06h-.04c-1.71,.02-3.11-1.34-3.13-3.05,0-.23,.02-.45,.07-.68,1.03-5.65,3.41-7.18,9.52-7.2,3.97-.01,7.95,0,12.28,0,1.87-4.86,3.64-9.44,5.78-15-7.47-.03-14.19,.13-21.22,.04L11.57,51.08c-.93,2.4-3.23,3.98-5.81,3.98h-.5Z" />
+        <div id="theme" class="relative min-h-screen flex flex-col shrink bg-primary text-slate-50 dark:bg-black">
+                <nav id="nav-bar" class="flex bg-secondary dark:text-white text-slate-50/90 px-1 border-b border-slate-400 overflow-hidden">
+                    <div class="w-fit flex justify-start items-center shrink">
+                        <div class="flex justify-start items-center shrink text-slate-50/90 w-full h-8">
+                            <button type="button" class="flex justify-start items-center">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                                 </svg>
-                                <h1 class="text-xl font-semibold tracking-tight text-slate-50">GDP</h1>
-                            </a>
+                                <span class="px-1">Menu</span>
+                            </button>
+                            <h1 class="text-xl font-semibold tracking-tight text-slate-50 px-8">GDP</h1>
                         </div>
+                    </div>
+                    <div class="w-fit flex justify-start items-center shrink">
+                        <button type="button">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                </path>
+                            </svg>
+                        </button>
+                        <button type="button">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </button>
+                        <button type="button">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </button>
+                        <button type="button">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </button>
                     </div>
                     <div class="w-full flex justify-end items-center grow">
                         <div class="w-full flex justify-end items-center text-slate-50/90">
                             <div class="w-full flex justify-end items-center ">
-                                <a href="/user" class="flex justify-start items-start my-1 p-1 text-left hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0"> 
-                                    <p id="username" class="font-semibold">
-                                        <span>Nome do Usuário</span>
+                                <a href="/user" class="flex justify-start items-center my-1 p-1 text-left hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0"> 
+                                    <p id="username" class="w-fit font-semibold pr-2">
+                                        Nome do Usuário
                                     </p>
-                                    <p id="userinfo">
-                                        <span>p017400</span>
-                                        <span>Diretoria</span>
-                                        <span>Gerencia</span>
-                                        <span>Núcleo</span>
+                                    <p id="userinfo" class="">
+                                        <span class="px-1 text-sm">p017400</span>
+                                        <span class="px-1 text-sm">Núcleo Adoção de Tecnologias</span>
+                                        <span class="px-1 text-sm">Gerência de Pesquisa, Desenvolvimento e Inovação</span>
                                     </p>
                                 </a>
+
+                                <a class="flex items-center justify-center cursor-pointer text-slate-50/90 hover:text-amber-300 ml-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                                    </svg>
+                                </a>
                             
-                                <a
-                                    class="flex items-center justify-center cursor-pointer text-slate-50/90 hover:text-red-300 ml-4">
+                                <a class="flex items-center justify-center cursor-pointer text-slate-50/90 hover:text-red-300 ml-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                     </svg>
                                 </a>
-                            
+                            </div>
                         </div>
                     </div>
                 </nav>
-                <aside class="relative flex flex-1 bg-primary">
-                    <nav id="nav-menu" class="menu w-auto flex flex-col items-center justify-start grow">
-                        <ul class="w-8 flex flex-col justify-start flex-grow bg-primary hover:w-72 hover:absolute hover:left-0 hover:top-0 pt-4 border-r border-r-slate-400">
-                            <li class="w-24 text-slate-50/90 hover:text-slate-50/90 dark:text-slate-50/90 bg-transparent hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
-                                <a href="https://prodam.dev" class="
-                                    w-64
-                                    flex
-                                    justify-start
-                                    items-center
-                                    px-1
-                                    py-2
-                                    ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
-                                            clip-rule="evenodd" />
-                                    </svg>                    
-                                    <span class="text-center text-slate-50/90 px-2 hidden">Projeto Design Patterns</span>
-                                </a>
-                            </li>
-                            <li
-                                class="w-24 text-slate-50/90 hover:text-slate-50/90 dark:text-slate-50/90 bg-transparent hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
-                                <a href="https://prodam.dev" class="
-                                                                w-64
-                                                                flex
-                                                                justify-start
-                                                                items-center
-                                                                px-1
-                                                                py-2
-                                                                ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
-                                            clip-rule="evenodd" />
+                <main class="w-full h-auto">
+                    <div class="flex flex-wrap w-full h-full">
+
+                        <!--Announcements-->
+                        <div class="w-full md:w-full lg:w-1/6 xl:w-2/12 bg-secondary/25 px-4">
+                            <div class="flex flex-wrap" id="tabs-id">
+                                <div class="w-full">
+                                    <div class="relative flex flex-col min-w-0 break-words w-full mb-6">
+                                        <div class="announcements__01 border-b-2 border-slate-400 py-2">
+                                            <div class="subject">
+                                                <h4 class="font-semibold">Fale com o GDP</h4>
+                                            </div>
+                                            <div class="message text-sm pl-2">
+                                                <p>
+                                                    Pensando em estreitar a comunicação entre nós e você, cliente do GDP, criamos um e-mail
+                                                    para facilitar a comunicação:
+                                                    <a href="mailto:faleconoscogdp@prodam.sp.gov.br">faleconoscogdp@prodam.sp.gov.br</a><br>
+                                        
+                                                    <br>Através dele, você poderá registrar as suas dúvidas, reclamações e sugestões
+                                                    diretamente com o nosso time responsável pelo produto.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="announcements__02 border-b-2 border-slate-400 py-2">
+                                            <div class="subject">
+                                                <h4 class="font-semibold">Fale com o GDP 2</h4>
+                                            </div>
+                                            <div class="message text-sm pl-2">
+                                                <p>
+                                                    Pensando em estreitar a comunicação entre nós e você, cliente do GDP, criamos um e-mail
+                                                    para facilitar a comunicação:
+                                                    <a href="mailto:faleconoscogdp@prodam.sp.gov.br">faleconoscogdp@prodam.sp.gov.br</a><br>
+                                        
+                                                    <br>Através dele, você poderá registrar as suas dúvidas, reclamações e sugestões
+                                                    diretamente com o nosso time responsável pelo produto.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Announcements-->
+                        
+                        <!--Calendar-->
+                        <div class="w-full md:w-full lg:w-3/6 xl:w-5/12 px-4">
+                            <div class="flex justify-start items-center">
+                                <h3 class="text-lg font-semibold">Lançamento de horas</h3>
+                            </div>
+                            <div class="flex justify-start items-center">
+                                <button type="button" id="left">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                                     </svg>
-                                    <span class="text-center text-slate-50/90 px-2 hidden">Projeto Design Patterns</span>
-                                </a>
-                            </li>
-                            <li
-                                class="w-24 text-slate-50/90 hover:text-slate-50/90 dark:text-slate-50/90 bg-transparent hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
-                                <a href="https://prodam.dev" class="
-                                                                w-64
-                                                                flex
-                                                                justify-start
-                                                                items-center
-                                                                px-1
-                                                                py-2
-                                                                ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
-                                            clip-rule="evenodd" />
+                                </button>
+                                <span id="month" class="text-xl font-semibold px-2"></span>
+                                <span id="year" class="text-sm px-4"></span>
+                                <button type="button" id="right">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
-                                    <span class="text-center text-slate-50/90 px-2 hidden">Projeto Design Patterns</span>
-                                </a>
-                            </li>
+                                </button>
+                            </div>
+                            <div id="calendar" class="calendar w-full">
+                            </div>
+                        </div>
+                        <!--/Calendar-->
+
+                        <!--Activities-->
+                        <div class="w-full flex flex-col flex-wrap md:w-full lg:w-2/6 xl:w-5/12 bg-secondary/25 px-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">Atividade em que você está alocado</h3>
+                            </div>
+                            <div class="activity-item flex flex-wrap w-full h-auto">
+                                <details class="w-full py-2 px-2 hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
+                                    <summary class="question w-full cursor-pointer">
+                                        <span class="text-xs">ID:</span> <span class="pr-2 font-semibold">70934</span><span class="text-xs">GDP:</span>
+                                        <span class="font-semibold">84011</span>
+                                        <br>
+                                        <span>PA1007 - PALESTRAS/EVENTOS</span>
+                                            PALESTRAS E EVENTOS - Alocações e Registros de apontamento de horas em Palestras e Eventos.
+                                        
+                                    </summary>
+                                    <span class="text-sm">Tipo: Extra Produção - Necessidade de informações (arquivos, relatórios, etc.) que não são
+                                        supridas pelas</span><br>
+                                    <span>Status: EM FORMATAÇÃO</span><br>
+                                    <span>Horas Estimadas: 00:00</span><br>
+                                    <span>Alocação: 07/02/2018</span><br>
+                                    <span>Início Estimado: -</span><br>
+                                    <span>Término Estimado: -</span>
+                                </details>
+                            </div>
+                            <div class="activity-item flex flex-wrap w-full h-auto">
+                                <details class="w-full py-2 px-2 hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
+                                    <summary class="question w-full cursor-pointer">
+                                        <span class="text-xs">ID:</span> <span class="pr-2 font-semibold">70934</span><span
+                                            class="text-xs">GDP:</span>
+                                        <span class="font-semibold">84011</span>
+                                        <br>
+                                        <span>PA1007 - PALESTRAS/EVENTOS</span>
+                                        PALESTRAS E EVENTOS - Alocações e Registros de apontamento de horas em Palestras e Eventos.
                             
+                                    </summary>
+                                    <span class="text-sm">Tipo: Extra Produção - Necessidade de informações (arquivos, relatórios, etc.) que não são
+                                        supridas pelas</span><br>
+                                    <span>Status: EM FORMATAÇÃO</span><br>
+                                    <span>Horas Estimadas: 00:00</span><br>
+                                    <span>Alocação: 07/02/2018</span><br>
+                                    <span>Início Estimado: -</span><br>
+                                    <span>Término Estimado: -</span>
+                                </details>
+                            </div>
+                            <div class="activity-item flex flex-wrap w-full h-auto">
+                                <details class="w-full py-2 px-2 hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
+                                    <summary class="question w-full cursor-pointer">
+                                        <span class="text-xs">ID:</span> <span class="pr-2 font-semibold">70934</span><span
+                                            class="text-xs">GDP:</span>
+                                        <span class="font-semibold">84011</span>
+                                        <br>
+                                        <span>PA1007 - PALESTRAS/EVENTOS</span>
+                                        PALESTRAS E EVENTOS - Alocações e Registros de apontamento de horas em Palestras e Eventos.
                             
-                        </ul>
-                    </nav>
-                    <div class="flex flex-col w-full pl-4 pt-4">
-                        Conteudo
+                                    </summary>
+                                    <span class="text-sm">Tipo: Extra Produção - Necessidade de informações (arquivos, relatórios, etc.) que não são
+                                        supridas pelas</span><br>
+                                    <span>Status: EM FORMATAÇÃO</span><br>
+                                    <span>Horas Estimadas: 00:00</span><br>
+                                    <span>Alocação: 07/02/2018</span><br>
+                                    <span>Início Estimado: -</span><br>
+                                    <span>Término Estimado: -</span>
+                                </details>
+                            </div>
+
+                                
+
+                        </div>
+                        <!--/Activities-->
+
+                        <!--OwnerActivities-->
+                        <div class="w-full md:w-1/2 lg:w-1/6 xl:w-2/12 px-4 hidden">
+                            Atividades Criadas
+                        </div>
+                        <!--/OwnerActivities-->
+                        
                     </div>
-                </aside>
+                </main>
+                
             
         </div>
 
@@ -169,6 +292,108 @@
                 ],
             }
         </script>
+        <script type="text/javascript">
+            //Source: https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/javascript/tabs/icons
+            function changeAtiveTab(event, tabID) {
+                let element = event.target;
+                while (element.nodeName !== "BUTTON") {
+                    element = element.parentNode;
+                }
+                ulElement = element.parentNode.parentNode;
+                aElements = ulElement.querySelectorAll("li > button");
+                tabContents = document.getElementById("tabs-id").querySelectorAll(".tab-content > div");
+                for (let i = 0; i < aElements.length; i++) {
+                    aElements[i].classList.remove("text-white");
+                    aElements[i].classList.remove("bg-pink-600");
+                    aElements[i].classList.add("text-pink-600");
+                    aElements[i].classList.add("bg-white");
+                    tabContents[i].classList.add("hidden");
+                    tabContents[i].classList.remove("block");
+                }
+                element.classList.remove("text-pink-600");
+                element.classList.remove("bg-white");
+                element.classList.add("text-white");
+                element.classList.add("bg-pink-600");
+                document.getElementById(tabID).classList.remove("hidden");
+                document.getElementById(tabID).classList.add("block");
+            }
+        </script>
+
+
+        <script>
+                    var currentDate = new Date();
+                        function createCalendar(d) {
+                            function monthDays(month, year) {
+                                var result = [];
+                                var days = new Date(year, month, 0).getDate();
+                                for (var i = 1; i <= days; i++) {
+                                    result.push(i);
+                                }
+                                return result;
+                            }
+                            Date.prototype.monthDays = function () {
+                                var d = new Date(this.getFullYear(), this.getMonth() + 1, 0);
+                                return d.getDate();
+                            };
+                            var details = {
+                                totalDays: d.monthDays(),
+                                weekDays: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
+                                months: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+                            };
+                            var start = new Date(d.getFullYear(), d.getMonth()).getDay();
+                            var cal = [];
+                            var day = 1;
+                            for (var i = 0; i <= 6; i++) {
+                                cal.push(["<div class='days-of-month w-full flex gap-1 mb-1'>"]);
+                                for (var j = 0; j < 7; j++) {
+                                    if (i === 0) {
+                                        cal[i].push("<div class='day-block flex justify-center basis-1/7'>" + details.weekDays[j] + "</div>");
+                                    } else if (day > details.totalDays) {
+                                        cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-rose-200/75'></div>");
+                                    } else {
+                                        if (i === 1 && j < start) {
+                                            cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-rose-200/75'></div>");
+                                        } else {
+                                            cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-rose-200/75 hover:bg-teal-400/90 hover:cursor-pointer'><span class='day block text-center h-6 w-7 bg-secondary'>" + day++ + "</span><span class='w-full flex justify-center items-center text-slate-900 font-semibold'>00:00</span></div>");
+                                        }
+                                    }
+                                }
+                                cal[i].push("</div>");
+                            }
+                            cal = cal.reduce(function (a, b) {
+                                return a.concat(b);
+                            }, []).join("");
+                            var detailsMonths = details.months[d.getMonth()];
+                            fullYear = d.getFullYear();
+                            document.getElementById("calendar").insertAdjacentHTML("beforeend", cal);
+                            document.getElementById("month").innerHTML = detailsMonths;
+                            document.getElementById('year').innerHTML = fullYear;
+                        }
+                        document.getElementById('left').addEventListener('click', event => {
+                            document.getElementById('calendar').innerHTML = '';
+                            if (currentDate.getMonth() === 0) {
+                                currentDate = new Date(currentDate.getFullYear() - 1, 11);
+                                createCalendar(currentDate);
+                            } else {
+                                currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1)
+                                createCalendar(currentDate);
+                            }
+                        });
+                        document.getElementById('right').addEventListener('click', event => {
+                            document.getElementById('calendar').innerHTML = '';
+                            if (currentDate.getMonth() === 11) {
+                                currentDate = new Date(currentDate.getFullYear() + 1, 0);
+                                createCalendar(currentDate);
+                            } else {
+                                currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1)
+                                createCalendar(currentDate);
+                            }
+                        });
+                        createCalendar(currentDate);
+        </script>
+
+
+        
 </body>
 
 </html>
