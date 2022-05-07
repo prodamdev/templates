@@ -24,6 +24,7 @@
       </style>
     <script>
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
@@ -50,87 +51,165 @@
         <strong>Esse site precisa do Javascript habilitado para funcionar corretamente. Por favor, habilite-o para
             continuar.</strong>
     </noscript>
-    <div>
-        <div id="theme" class="relative min-h-screen flex flex-col shrink bg-primary text-slate-50 dark:bg-black">
-                <nav id="nav-bar" class="flex bg-secondary dark:text-white text-slate-50/90 px-1 border-b border-slate-400 overflow-hidden">
-                    <div class="w-fit flex justify-start items-center shrink">
-                        <div class="flex justify-start items-center shrink text-slate-50/90 w-full h-8">
-                            <button type="button" class="flex justify-start items-center">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    <div class="relative">
+        <div id="menu" class="absolute block left-0 top-0 w-full h-full bg-black/80 z-50 !hidden">
+            <div class="w-full h-full flex flex-wrap justify-start items-stretch">
+                <nav id="nav-menu" class="menu w-auto h-full flex flex-col items-start justify-start shrink">
+                    <ul class="w-auto flex flex-col justify-start flex-grow bg-primary pt-4 border-r border-r-slate-400">
+                        <li class="w-auto text-slate-50/90 hover:text-slate-50/90 dark:text-slate-50/90 bg-transparent hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
+                        <button type="button" onclick="menu()" class="flex justify-start items-center">
+                            <svg class="w-8 h-8 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <span class="px-1">Menu</span>
+                        </button>
+                        </li>
+                        <li class="w-auto text-slate-50/90 hover:text-slate-50/90 dark:text-slate-50/90 bg-transparent hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
+                            <a href="https://prodam.dev"
+                                class="flex justify-start items-center px-1 py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                                        clip-rule="evenodd" />
                                 </svg>
-                                <span class="px-1">Menu</span>
-                            </button>
-                            <h1 class="text-xl font-semibold tracking-tight text-slate-50 px-8">GDP</h1>
-                        </div>
-                    </div>
-                    <div class="w-fit flex justify-start items-center shrink">
-                        <button type="button">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-                                </path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z">
-                                </path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="w-full flex justify-end items-center grow">
-                        <div class="w-full flex justify-end items-center text-slate-50/90">
-                            <div class="w-full flex justify-end items-center ">
-                                <a href="/user" class="flex justify-start items-center my-1 p-1 text-left hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0"> 
-                                    <p id="username" class="w-fit font-semibold pr-2">
-                                        Nome do Usuário
-                                    </p>
-                                    <p id="userinfo" class="">
-                                        <span class="px-1 text-sm">p017400</span>
-                                        <span class="px-1 text-sm">Núcleo Adoção de Tecnologias</span>
-                                        <span class="px-1 text-sm">Gerência de Pesquisa, Desenvolvimento e Inovação</span>
-                                    </p>
-                                </a>
-
-                                <a class="flex items-center justify-center cursor-pointer text-slate-50/90 hover:text-amber-300 ml-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                                    </svg>
-                                </a>
-                            
-                                <a class="flex items-center justify-center cursor-pointer text-slate-50/90 hover:text-red-300 ml-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                                <span class="text-center text-slate-50/90 px-2">Projeto Design Patterns</span>
+                            </a>
+                        </li>
+                        <li
+                            class="w-auto text-slate-50/90 hover:text-slate-50/90 dark:text-slate-50/90 bg-transparent hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
+                            <a href="https://prodam.dev" class="flex justify-start items-center px-1 py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-center text-slate-50/90 px-2">Projeto Design Patterns</span>
+                            </a>
+                        </li>
+                        <li
+                            class="w-auto text-slate-50/90 hover:text-slate-50/90 dark:text-slate-50/90 bg-transparent hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
+                            <a href="https://prodam.dev" class="flex justify-start items-center px-1 py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-center text-slate-50/90 px-2">Projeto Design Patterns</span>
+                            </a>
+                        </li>
+                        <li
+                            class="w-auto text-slate-50/90 hover:text-slate-50/90 dark:text-slate-50/90 bg-transparent hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
+                            <a href="https://prodam.dev" class="flex justify-start items-center px-1 py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-center text-slate-50/90 px-2">Projeto Design Patterns</span>
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
-                <main class="w-full h-auto">
-                    <div class="flex flex-wrap w-full h-full">
+                <div class="flex flex-col w-auto h-full justify-start px-4 pt-4 grow">
+                    <div class="flex flex-col p-2 bg-white">
+                        Formularios
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="theme" class="relative min-h-screen flex flex-col shrink bg-primary text-slate-50 dark:text-rose-400 dark:bg-black">
+            <nav id="nav-bar" class="flex bg-secondary dark:text-white text-slate-50/90 px-1 border-b border-slate-400 overflow-hidden">
+                <div class="w-fit flex justify-start items-center shrink">
+                    <div class="flex justify-start items-center shrink text-slate-50/90 w-full h-8">
+                        <button type="button" onclick="menu()" class="flex justify-start items-center">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <span class="px-1">Menu</span>
+                        </button>
+                        <h1 class="text-xl font-semibold tracking-tight text-slate-50 px-8">GDP</h1>
+                    </div>
+                </div>
+                <div class="w-fit flex justify-start items-center shrink">
+                    <button type="button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button type="button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </button>
+                    <button type="button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button type="button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="w-full flex justify-end items-center grow">
+                    <div class="w-full flex justify-end items-center text-slate-50/90">
+                        <div class="w-full flex justify-end items-center ">
+                            <a href="/user" class="flex justify-start items-center my-1 p-1 text-left hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0"> 
+                                <p id="username" class="w-fit font-semibold pr-2">
+                                    Nome do Usuário
+                                </p>
+                                <p id="userinfo" class="">
+                                    <span class="px-1 text-sm">p017400</span>
+                                    <span class="px-1 text-sm">Núcleo Adoção de Tecnologias</span>
+                                    <span class="px-1 text-sm">Gerência de Pesquisa, Desenvolvimento e Inovação</span>
+                                </p>
+                            </a>
 
+                            <button type="button" onclick="darkMode()" class="flex items-center justify-center cursor-pointer text-slate-50/90 hover:text-amber-300 ml-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                                </svg>
+                            </button>
+                        
+                            <a class="flex items-center justify-center cursor-pointer text-slate-50/90 hover:text-red-300 ml-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <main class="w-full h-auto">
+                <div class="flex flex-col w-full h-full">
+                    <div class="relative flex flex-wrap">
+                        
                         <!--Announcements-->
-                        <div class="w-full md:w-full lg:w-1/6 xl:w-2/12 bg-secondary/25 px-4">
+                        <div id="__announcements" class="relative w-full md:w-full lg:w-1/6 xl:w-2/12 bg-secondary px-4 z-40 overflow-hidden transition-all">
+                            <div class="flex w-full justify-end items-end text-red-200 py-1">
+                                <button type="button" onclick="toggleSidebar('__announcements','l')"
+                                    class="w-full justify-end items-center">
+                                    <span class="float-left pr-2">Fechar</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 float-left mt-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
                             <div class="flex flex-wrap" id="tabs-id">
                                 <div class="w-full">
-                                    <div class="relative flex flex-col min-w-0 break-words w-full mb-6">
+                                    <div class="flex flex-col min-w-0 break-words w-full mb-6">
                                         <div class="announcements__01 border-b-2 border-slate-400 py-2">
                                             <div class="subject">
                                                 <h4 class="font-semibold">Fale com o GDP</h4>
@@ -165,11 +244,15 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                        </div>
+                        <div class="fixed flex flex-col z-10">
+                            <button type="button" onclick="toggleSidebar('__announcements','l')" class="left-0 bg-secondary rounded-t px-2">Comunicados</button>
                         </div>
                         <!--/Announcements-->
                         
                         <!--Calendar-->
-                        <div class="w-full md:w-full lg:w-3/6 xl:w-5/12 px-4">
+                        <div class="w-full md:w-full lg:w-3/6 xl:w-5/12 px-4 mt-8 z-40">
                             <div class="flex justify-start items-center">
                                 <h3 class="text-lg font-semibold">Lançamento de horas</h3>
                             </div>
@@ -193,9 +276,19 @@
                         <!--/Calendar-->
 
                         <!--Activities-->
-                        <div class="w-full flex flex-col flex-wrap md:w-full lg:w-2/6 xl:w-5/12 bg-secondary/25 px-4">
+                        <div id="__activities" class="w-full flex flex-col flex-wrap md:w-full lg:w-2/6 xl:w-5/12 bg-secondary px-4 z-40 pr-8 overflow-hidden transition-all">
+                            <div class="flex w-full justify-end items-end text-red-200 py-1">
+                                <button type="button" onclick="toggleSidebar('__activities','r')" class="w-full justify-end items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 float-right mt-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="float-right pr-2">Fechar</span>
+                                </button>
+                            </div>
                             <div>
-                                <h3 class="text-lg font-semibold">Atividade em que você está alocado</h3>
+                                <h3 class="text-lg font-semibold">Atividades em que você está alocado</h3>
                             </div>
                             <div class="activity-item flex flex-wrap w-full h-auto">
                                 <details class="w-full py-2 px-2 hover:bg-gradient-to-r hover:from-sky-500/25 hover:to-secondary/0">
@@ -256,24 +349,22 @@
                                     <span>Término Estimado: -</span>
                                 </details>
                             </div>
-
-                                
-
+                        </div>
+                        <div class="fixed flex flex-col right-0 z-10">
+                            <button type="button" onclick="toggleSidebar('__activities','r')"
+                                class="left-0 bg-secondary rounded-t px-2">Atividades em que você está alocado</button>
                         </div>
                         <!--/Activities-->
-
-                        <!--OwnerActivities-->
-                        <div class="w-full md:w-1/2 lg:w-1/6 xl:w-2/12 px-4 hidden">
-                            Atividades Criadas
-                        </div>
-                        <!--/OwnerActivities-->
-                        
                     </div>
-                </main>
-                
-            
+                    <!--OwnerActivities-->
+                    <div class="w-full md:w-1/2 lg:w-1/6 xl:w-2/12 px-4">
+                        Atividades Criadas
+                    </div>
+                    <!--/OwnerActivities-->
+                </div>
+            </main>
         </div>
-
+        <div id="overlay" class="absolute block left-0 top-0 w-full h-full bg-black/80 z-[45] !hidden"></div>
         <script>
             tailwind.config = {
                 content: [],
@@ -292,6 +383,30 @@
                 ],
             }
         </script>
+        <script>
+            var overlay = document.getElementById('menu');
+            overlay.addEventListener('click', function () {
+                //menu();
+            });
+            function toggleSidebar(e,s) {
+                if (s == 'r') {
+                    document.getElementById(e).classList.toggle('!translate-x-[200%]');
+                    document.getElementById(e).classList.toggle('!p-0');
+                } else {
+                    document.getElementById(e).classList.toggle('!w-0');
+                    document.getElementById(e).classList.toggle('!p-0');
+                }
+            }
+            function menu() {
+                document.getElementById('menu').classList.toggle('!hidden');
+                document.getElementById('overlay').classList.toggle('!hidden');
+            }
+            function darkMode() {
+                document.body.classList.toggle('dark')
+            }
+            
+        </script>
+
         <script type="text/javascript">
             //Source: https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/javascript/tabs/icons
             function changeAtiveTab(event, tabID) {
@@ -349,12 +464,12 @@
                                     if (i === 0) {
                                         cal[i].push("<div class='day-block flex justify-center basis-1/7'>" + details.weekDays[j] + "</div>");
                                     } else if (day > details.totalDays) {
-                                        cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-rose-200/75'></div>");
+                                        cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-blue-200/75'></div>");
                                     } else {
                                         if (i === 1 && j < start) {
-                                            cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-rose-200/75'></div>");
+                                            cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-blue-200/75'></div>");
                                         } else {
-                                            cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-rose-200/75 hover:bg-teal-400/90 hover:cursor-pointer'><span class='day block text-center h-6 w-7 bg-secondary'>" + day++ + "</span><span class='w-full flex justify-center items-center text-slate-900 font-semibold'>00:00</span></div>");
+                                            cal[i].push("<div class='day-block w-full h-8 flex justify-start basis-1/7 bg-blue-200/75 hover:bg-sky-400/90 hover:cursor-pointer'><span class='day block text-center h-6 w-7 bg-secondary'>" + day++ + "</span><span class='w-full flex justify-center items-center text-slate-900 font-semibold'>00:00</span></div>");
                                         }
                                     }
                                 }
