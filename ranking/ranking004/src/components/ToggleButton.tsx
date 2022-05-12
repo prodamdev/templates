@@ -1,5 +1,5 @@
 import useAppData from '../data/hook/UseAppData'
-import { MoonSolidIcon, SunSolidIcon, EyeIcon } from './Icons'
+import {MenuIcon } from './Icons'
 
 export default function ToggleButton(props) {
     const { switchTheme } = useAppData()
@@ -17,7 +17,7 @@ export default function ToggleButton(props) {
                 w-6 h-6
                 rounded-full
             `}>
-                {EyeIcon}
+                {MenuIcon}
             </div>
             <div className={`
                 hidden lg:flex items-center ml-2
@@ -43,7 +43,7 @@ export default function ToggleButton(props) {
                 w-6 h-6
                 rounded-full
             `}>
-                {EyeIcon}
+                {MenuIcon}
             </div>
 
         </div>
